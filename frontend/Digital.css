@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Authentication Page Styles  */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e2229, #2d3748);
+}
+
+.auth-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.auth-card h2 {
+    color: #1e2229;
+    font-size: 24px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.auth-card .subtitle {
+    color: #718096;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #4a5568;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #4e4376;
+}
+
+.input-btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+#send-otp-btn {
+    background-color: #2b5876;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.login-btn {
+    width: 100%;
+    background-color: #4e4376;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-btn:disabled, #send-otp-btn:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+}
+
+.message-banner {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.success-text { color: #38a169; }
+.error-text { color: #e53e3e; }
+
+.seprtion {
+    height: 7px;
+    color: rgb(83, 83, 83);
+}
+
+/* --- Dashboard Framework Styles --- */
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #1e2229;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.nav-links a {
+    color: #a0aec0;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.nav-links a.active {
+    background-color: #2d3748;
+    color: #ffffff;
+}
+
+.user-profile {
+    border-top: 1px solid #2d3748;
+    padding-top: 16px;
+}
+
+.user-name { font-size: 14px; font-weight: bold; }
+.user-role { color: #a0aec0; font-size: 12px; }
+
+.main-content {
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.top-bar h1 { font-size: 24px; color: #2d3748; }
+.quick-stats { display: flex; gap: 16px; }
+
+.stat-item {
+    background: #ffffff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* Document Cards Styling */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.doc-card {
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.license-card { background: linear-gradient(135deg, #134e5e, #71b280); }
+.insurance-card { background: linear-gradient(135deg, #cb356b, #bd3f32); }
+
+.card-header { display: flex; justify-content: space-between; font-size: 12px; }
+.status { background: rgba(255, 255, 255, 0.25); padding: 2px 6px; border-radius: 4px; }
+.card-body { margin: 25px 0; }
+.card-body h3 { font-size: 18px; margin-bottom: 4px; }
+.card-footer { font-size: 11px; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 10px; }
+
+@media (max-width: 768px) {
+    .dashboard-container { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .main-content { padding: 20px; }
+}
+
+.switch-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #718096;
+    font-size: 14px;
+}
+
+.switch-btn {
+    background: none;
+    border: none;
+    color: #4e4376;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}

@@ -1,0 +1,290 @@
+<html>
+<head>
+    <title>Secure Document Wallet</title>
+    <link rel="stylesheet" href="Digital.css">
+</head>
+<body>
+      
+    <!-- Authentication Section -->
+
+    <div id="login-page" class="auth-wrapper">
+
+        <div class="auth-card">
+
+            <!-- LOGIN FORM -->
+
+            <div id="login-form-container">
+
+                <h2>Secure Wallet Login</h2>
+
+                <p class="subtitle">
+                    Enter Your Details For Accessing Your Documents
+                </p>
+
+                <form id="auth-form">
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label>Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="name@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <label>Password</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter Your Password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Login Button -->
+                    <button
+                        type="submit"
+                        id="submit-login-btn"
+                        class="login-btn"
+                    >
+                        Login
+                    </button>
+
+                </form>
+
+                <!-- Login Message -->
+
+                <div
+                    id="auth-message"
+                    class="message-banner"
+                ></div>
+
+                <!-- Register Link -->
+
+                <p class="switch-text">
+
+                    Don't have an account?
+
+                    <button
+                        type="button"
+                        id="show-register-btn"
+                        class="switch-btn"
+                    >
+                        Register
+                    </button>
+
+                </p>
+                
+            </div>
+
+
+            <!-- REGISTER FORM -->
+
+            <div id="register-form-container" class="hidden">
+
+                <h2>Create Account</h2>
+
+                <p class="subtitle">
+                    Create your Digital Document Wallet account
+                </p>
+
+
+                <form id="register-form">
+
+                    <!-- Name -->
+
+                    <div class="form-group">
+
+                        <label>Full Name</label>
+
+                        <input
+                            type="text"
+                            id="register-name"
+                            placeholder="Enter Your Name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label>Email Address</label>
+
+                        <input
+                            type="email"
+                            id="register-email"
+                            placeholder="name@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label>Password</label>
+
+                        <input
+                            type="password"
+                            id="register-password"
+                            placeholder="Create Password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Contact Number -->
+
+                    <div class="form-group">
+
+                        <label>Contact Number</label>
+
+                        <input
+                            type="tel"
+                            id="register-phone"
+                            placeholder="Enter Contact Number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Register Button -->
+
+                    <button
+                        type="submit"
+                        class="login-btn"
+                    >
+                        Register
+                    </button>
+
+                </form>
+
+                <!-- Register Message -->
+
+                <div
+                    id="register-message"
+                    class="message-banner"
+                ></div>
+
+                <!-- Login Link -->
+
+                <p class="switch-text">
+
+                    Already have an account?
+
+                    <button
+                        type="button"
+                        id="show-login-btn"
+                        class="switch-btn"
+                    >
+                        Login
+                    </button>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>    
+   
+<div class="separation"></div>
+    <!-- 2. Dashboard Interface (Hidden on Load) -->
+    <div id="dashboard-page" class="dashboard-container hidden">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">WalletDash</div>
+            <nav class="nav-links">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">My Documents</a>
+                <a href="#">Shared Links</a>
+                <a href="#">Security Settings</a>
+            </nav>
+            <div class="user-profile">
+                <p id="display-user" class="user-name">User Account</p>
+                <small class="user-role">Premium Account</small>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1>Document Dashboard</h1>
+                <div class="quick-stats">
+                    <div class="stat-item">Total Docs: <strong>3</strong></div>
+                    <div class="stat-item">Verified: <strong>3</strong></div>
+                </div>
+            </header>
+            
+            <!-- Cards Grid Layout -->
+            <div class="card-grid">
+                <!-- National ID Card -->
+                <div class="doc-card id-card">
+                    <div class="card-header">
+                        <span>National ID</span>
+                        <span class="status active">Verified</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-holder-name">DHARMIK</h3>
+                        <p>ID No: 1234-5678-9012</p>
+                    </div>
+                    <div class="card-footer">
+                        <small>Expires: 10/2030</small>
+                    </div>
+                </div>
+
+                <!-- Driver License -->
+                <div class="doc-card license-card">
+                    <div class="card-header">
+                        <span>Driver License</span>
+                        <span class="status active">Valid</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-holder-name">KRISH</h3>
+                        <p>Lic No: DL-987654321</p>
+                    </div>
+                    <div class="card-footer">
+                        <small>Class: Car / Bike</small>
+                    </div>
+                </div>
+
+                <!-- Health Insurance Card -->
+                <div class="doc-card insurance-card">
+                    <div class="card-header">
+                        <span>Health Insurance</span>
+                        <span class="status active">Active</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-holder-name">MEET</h3>
+                        <p>Policy: MED-44556677</p>
+                    </div>
+                    <div class="card-footer">
+                        <small>Provider: Global Health</small>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="Digital.js"></script>
+</body>
+</html>
